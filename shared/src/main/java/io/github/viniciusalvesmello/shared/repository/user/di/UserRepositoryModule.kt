@@ -4,7 +4,7 @@ import io.github.viniciusalvesmello.shared.repository.user.UserRepository
 import io.github.viniciusalvesmello.shared.repository.user.UserRepositoryImpl
 import org.koin.dsl.module
 
-class RepositoryUserModule {
+class UserRepositoryModule {
     companion object {
         fun get() = module {
         

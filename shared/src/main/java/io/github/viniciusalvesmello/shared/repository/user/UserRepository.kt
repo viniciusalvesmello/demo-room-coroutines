@@ -1,10 +1,11 @@
 package io.github.viniciusalvesmello.shared.repository.user
 
-import io.github.viniciusalvesmello.shared.database.entity.User
+import io.github.viniciusalvesmello.shared.repository.user.model.UserData
+import kotlinx.coroutines.flow.Flow
 
 interface UserRepository {
-    fun getAll(): List<User>
-    fun loadAllByIds(userIds: IntArray): List<User>
-    suspend fun insertAll(vararg users: User)
-    suspend fun delete(user: User)
+    fun getAll(): Flow<List<UserData>>
+    fun loadAllByIds(userIds: IntArray): Flow<List<UserData>>
+    suspend fun insertAll(users: List<UserData>)
+    suspend fun delete(user: UserData)
 }
